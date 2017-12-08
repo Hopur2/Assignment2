@@ -104,7 +104,7 @@ Employee EmployeeUI::create_employee()
     cin >> year;
     failure_check(year);
 
-    Employee employee(name,ssn,salary,month,year);
+    Employee employee(ssn,name,salary,month,year);
     return employee;
 }
 
