@@ -1,0 +1,10 @@
+#ifndef INVALIDSALARYEXCEPTION_H
+#define INVALIDSALARYEXCEPTION_H
+
+
+class InvalidSalaryException
+{
+
+};
+
+#endif // INVALIDSALARYEXCEPTION_H

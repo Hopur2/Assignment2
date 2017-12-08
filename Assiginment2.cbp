@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Assiginment2" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Assiginment2" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="include/UI" />
+					<Add directory="include/model" />
+					<Add directory="include/service" />
+					<Add directory="include/ repositories" />
+					<Add directory="include/repositories" />
+					<Add directory="include/exceptions" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Assiginment2" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="include/UI" />
+					<Add directory="include/model" />
+					<Add directory="include/service" />
+					<Add directory="include/ repositories" />
+					<Add directory="include/repositories" />
+					<Add directory="include/exceptions" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="include/UI/EmployeeUI.h" />
+		<Unit filename="include/exceptions/InvalidMonthException.h" />
+		<Unit filename="include/exceptions/InvalidNameException.h" />
+		<Unit filename="include/exceptions/InvalidSalaryException.h" />
+		<Unit filename="include/exceptions/InvalidSsnException.h" />
+		<Unit filename="include/exceptions/InvalidYearException.h" />
+		<Unit filename="include/exceptions/NoFileException.h" />
+		<Unit filename="include/model/Employee.h" />
+		<Unit filename="include/model/SalaryRecords.h" />
+		<Unit filename="include/repositories/EmployeeRepository.h" />
+		<Unit filename="include/service/EmployeeService.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="src/UI/EmployeeUI.cpp" />
+		<Unit filename="src/exceptions/InvalidMonthException.cpp" />
+		<Unit filename="src/exceptions/InvalidNameException.cpp" />
+		<Unit filename="src/exceptions/InvalidSalaryException.cpp" />
+		<Unit filename="src/exceptions/InvalidSsnException.cpp" />
+		<Unit filename="src/exceptions/InvalidYearException.cpp" />
+		<Unit filename="src/exceptions/NoFileException.cpp" />
+		<Unit filename="src/model/Employee.cpp" />
+		<Unit filename="src/model/SalaryRecords.cpp" />
+		<Unit filename="src/repositories/EmployeeRepository.cpp" />
+		<Unit filename="src/service/EmployeeService.cpp" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
