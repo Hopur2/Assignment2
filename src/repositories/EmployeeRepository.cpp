@@ -5,14 +5,16 @@ EmployeeRepository::EmployeeRepository()
     //ctor
 }
 
-void EmployeeRepository::add_employee(const Employee& employee)
+void EmployeeRepository::WriteFile(vector<Employee> records)
 {
     ofstream fout;
-    fout.open("employee.txt",ios::app);
+    fout.open("employee.txt");
     if(fout.is_open())
     {
-        fout << employee;
-        fout.close();
+        for(unsigned int i = 0; i < records.size(); i++)
+        {
+            fout << records[i];
+        }
     }
     else{
         //throw error

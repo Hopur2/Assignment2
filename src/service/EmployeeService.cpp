@@ -6,14 +6,30 @@ EmployeeService::EmployeeService()
     ER.ReadFile();
     Records = ER.PassRecords();
 }
-
 void EmployeeService::add_employee(const Employee& employee)
 {
+    Records = ER.PassRecords();
+    bool found = false;
     if(IsValidName(employee) && IsValidMonth(employee) && isValidYear(employee) && IsValidSSN(employee) && ISValidSalary(employee))
     {
-        employee_repo.add_employee(employee);
+        for(unsigned int i = 0; i < Records.size(); i++)
+        {
+            if(Records[i].get_ssn() == employee.get_ssn())
+            {
+                if((employee.get_month() == Records[i].get_month()) && (employee.get_year() == Records[i].get_year()))
+                {
+                    found = true;
+                    Records[i].set_salary(employee.get_salary());
+                    break;
+                }
+            }
+        }
+        if(!found)
+        {
+            Records.push_back(employee);
+        }
     }
-
+    ER.WriteFile(Records);
 }
 
 void EmployeeService::get_year_salary(string ssn)
@@ -32,7 +48,6 @@ void EmployeeService::get_year_salary(string ssn)
 
     cout << name << " has the year salary of: " << year <<endl;
 }
-
 bool EmployeeService::IsValidName(const Employee& employee)
 {
     string name = employee.get_name();
@@ -92,8 +107,6 @@ bool EmployeeService::ISValidSalary(const Employee& employee)
 
 void EmployeeService::PrintRecords()
 {
-    //ER.ReadFile(input);
-    Records = ER.PassRecords();
     for(unsigned int i = 0; i < Records.size(); i++)
     {
         cout << Records[i] << endl;

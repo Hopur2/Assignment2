@@ -13,7 +13,7 @@ class EmployeeRepository
 {
     public:
         EmployeeRepository();
-        void add_employee(const Employee& employee);
+        void WriteFile(vector<Employee> records);
         void ReadFile();
         void FindInFile(string input);
         void Filterrecords(string line);

@@ -14,6 +14,7 @@ class Employee
         int get_salary() const;
         int get_month() const;
         int get_year() const;
+        void set_salary(int salary);
 
         friend ostream& operator << (ostream& out,const Employee& employee);
     private:

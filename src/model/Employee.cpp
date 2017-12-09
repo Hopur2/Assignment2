@@ -43,3 +43,8 @@ int Employee::get_year() const
 {
     return _year;
 }
+
+void Employee::set_salary(int salary)
+{
+    _salary = salary;
+}
